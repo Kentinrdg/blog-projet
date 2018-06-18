@@ -7,31 +7,26 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'mon blog';
-  @Input() titlePost: string;
-  @Input() contentPost: string;
 
-  comments=[
-  	{
-  	date: new Date(), 
-    title:"My Title", 
-    comments:"MyComment"
-  	},
+
+  posts = [
+    {
+      title: "Mon post 1",
+      content: "BlaBlaCar, est une plateforme communautaire payante de covoiturage proposé par la société Comuto. Avec 20 millions d'utilisateurs en 2015, BlaBlaCar est leader ",
+      loveIts: 0,
+      created_at: new Date()
+    },
+    {
+      title: "Mon post 2",
+      content: "BlaBlaCar, est une plateforme communautaire payante de covoiturage proposé par la société Comuto. Avec 20 millions d'utilisateurs en 2015, BlaBlaCar est leader ",
+      loveIts: 0,
+      created_at: new Date()
+    },
+    {
+      title: "Mon post 3",
+      content: "BlaBlaCar, est une plateforme communautaire payante de covoiturage proposé par la société Comuto. Avec 20 millions d'utilisateurs en 2015, BlaBlaCar est leader ",
+      loveIts: 0,
+      created_at: new Date()
+    }
   ];
-
-  post={date: null, title:"", comments:""};
-
-    lastUpdate = new Promise((resolve, reject) => {
-
-  	const date = new Date();
-  	setTimeout(
-  		() => {
-  			resolve(date);
-  	}, 2000
-  	);
-});
-
-		onAddPost(){
-      this.post.date = new Date();
-			this.comments.push(this.post);
-		}
 }

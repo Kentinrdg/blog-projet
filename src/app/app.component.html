@@ -4,32 +4,20 @@
     Bienvenue dans {{ title }}!
   </h1>
 </div>
-<div style="text-align: left;">
-      <p>Titre du post: 
-    <input type="text" class="form-control" [(ngModel)]="post.title">
-    </p>
-    <textarea class="form-control" rows="4" cols="50" [(ngModel)]="post.comments">
-       
-    </textarea>
-    <br>
-    <button class="btn btn-primary" (click)="onAddPost()">Envoyer le post</button>
 
-</div>
-
+<hr>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>Les derniers post :</h2>
+      <h3>Les derniers post :</h3>
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let c of comments">
-                   <p>{{c.title}}</p> {{c.comments}},
-          <span class="badge">{{c.date|date:'dd/MM/yyyy:HH:mm:ss'}}</span>
-
-      <button class="btn btn-success">Love it</button>
-      <button class="btn btn-danger">Don't Love it</button>
-
+        <app-post-list-component  *ngFor="let post of posts"
+                       [postTitle]="post.title"
+                       [postContent]="post.content"
+                       [postLoveIt]="post.loveIts"
+                       [postDate]="post.created_at"
+                       ></app-post-list-component>
       </ul>
-
     </div>
   </div>
 </div>

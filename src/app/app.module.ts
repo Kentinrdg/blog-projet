@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PostListComponentComponent } from './post-list-component/post-list-component.component';
 import { FormsModule } from '@angular/forms';
+import { PostListItemComponentComponent } from './post-list-item-component/post-list-item-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponentComponent
+    PostListComponentComponent,
+    PostListItemComponentComponent
   ],
   imports: [
     BrowserModule,

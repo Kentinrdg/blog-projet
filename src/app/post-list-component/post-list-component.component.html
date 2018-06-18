@@ -1,3 +1,8 @@
-<p>
-  post-list-component works!
-</p>
+
+<li class="list-group-item">
+<h3><p>{{postTitle}}</p></h3><hr>
+ {{postContent}},
+<span class="badge">{{postDate | date: 'dd/MM/yyyy' | uppercase }}</span>
+<br>
+<app-post-list-item-component></app-post-list-item-component>
+</li>
