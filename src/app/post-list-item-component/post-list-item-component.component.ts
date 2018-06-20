@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListItemComponentComponent implements OnInit {
 
+	  numberClick: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addLike(){
+  this.numberClick	= this.numberClick + 1;
+  	console.log("Like !");
+
+  }
+
+  dislike(){
+  	  this.numberClick	= this.numberClick - 1;
+  	console.log("dislike !");
   }
 
 }
